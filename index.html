@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Satisfaction Survery</title>
+    <link rel="stylesheet" href="styles.css">    
+</head>
+<body>
+
+    <div class="container">
+        <!-- survey title -->
+        <div class="title">
+            <h1 id="title">Workplace Satisfaction Survey Form</h1>
+            <p id="description">Please take a moment to fill out this form to help us understand your workplace preferences.</p>
+        </div>
+    
+        <!-- form design -->
+        <div class="form">
+            <form id="survey-form" action="form/submit" method="post"    enctype="text/plain" name="SurveyForm">
+                
+                <div class="name input">
+                    <label id="name-label" for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+    
+                <div class="email input">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+    
+                <div class="age input">
+                    <label id="number-label" for="number">Age</label>
+                    <input type="number" id="number" placeholder="Age" min="18" max="65" required>
+                </div>
+    
+                <div class="gender input">
+                    <p>Gender</p>
+                    <div class="gender-select input">
+                        <label for="male"><input type="radio" name="gender" value="male" id="male" required> Male</label>
+                        <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+                    </div>
+                </div>
+    
+                
+                <div class="stress input">
+                    <label for="stress">How often are you stressed at work?</label>
+                    <select id="stress">
+                        <option value="" selected disabled >Select</option>
+                        <option value="Very Often">Very Often</option>
+                        <option value="Often">Often</option>
+                        <option value="Rarely">Rarely</option>
+                        <option value="Never">Never</option>
+                    </select>
+                </div>
+
+                <div class="like-most textarea">
+                    <label for="name">What do you like the most about your workplace?</label>
+                    <textarea name="other" id="other" cols="30" rows="5" placeholder="I like..."></textarea>
+                </div>
+
+                <div class="like-most textarea">
+                    <label for="name">What do you like the least about your workplace?</label>
+                    <textarea name="other" id="other" cols="30" rows="5" placeholder="I don't like..."></textarea>
+                </div>
+
+                <div class="improvements">
+                    <p>Improvements you would like to see:</p>
+
+                    <div class="improv-cb">
+                        <div class="improvs">
+                            <label><input type="checkbox" value="Upgraded Facilities"> Upgraded Facilities</label>
+                            <label><input type="checkbox" value="Flexible Work Arrangements"> Flexible Work Arrangements</label>
+                            <label><input type="checkbox" value="Social Responsibility"> Social Responsibility</label>
+                            <label><input type="checkbox" value="Community Engagement"> Community Engagement</label>
+                        </div>
+                        <div class="improvs">
+                            <label><input type="checkbox" value="Development Programs"> Development Programs</label>
+                            <label><input type="checkbox" value="Mental Health Support"> Mental Health Support</label>
+                            <label><input type="checkbox" value="Diversity Initiatives"> Diversity Initiatives</label>
+                            <label><input type="checkbox" value="Inclusion Initiatives"> Inclusion Initiatives</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rating input">
+                    <label for="dropdown">How would you rate your workplace?</label>
+                    <select id="dropdown" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Poor">Poor</option>
+                        <option value="Very Poor">Very Poor</option>
+                    </select>
+                </div>
+
+                <div class="other textarea">
+                    <label for="name">Other thoughts & suggestions:</label>
+                    <textarea name="other" id="other" cols="30" rows="5" placeholder="Other thoughts..."></textarea>
+                </div>
+    
+                <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+    
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+*, 
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nunito';
+    color: whitesmoke;
+    background-color: rgb(10, 10, 20);
+    padding-bottom: 3rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+    min-width: 300px;
+    width: 80vw;
+}
+
+.container .title {
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+}
+
+form {
+    background-color: rgb(0, 0, 10);
+    padding: 2rem;
+    border: solid 2px rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(100, 100, 150, .1);
+
+    transition: .2s ease;
+}
+
+form:hover {
+    box-shadow: 0 0 20px rgba(100, 100, 150, .2);
+    border: solid 2px rgba(255, 255, 255, 0.2);
+}
+
+.input {
+    margin: 0 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.input input:not([type="radio"]) {
+    outline: none;
+    border: solid 2px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    caret-color: whitesmoke;
+    color: whitesmoke;
+    padding: .4rem;
+    
+    transition: .2s ease;
+}
+
+.input input:not([type="radio"])::placeholder {
+    color: rgb(230, 230, 230);
+}
+
+.input input:hover,
+.input input:focus {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.input input:not([type="radio"]),
+.gender-select {
+    width: 50%;
+    margin: 0;
+}
+
+.gender-select label {
+    flex: 1 0 50%;
+}
+
+.rating label {
+    width: 50%;
+    padding-right: 1rem;
+}
+
+select {
+    width: 50%;
+    outline: none;
+    border: solid 2px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    padding: .4rem;
+
+    transition: .2s ease;
+}
+
+select:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+select option {
+    background-color: rgb(10, 10, 20);
+    transition: .3s ease;
+}
+
+.improvements {
+    margin-bottom: 2rem;
+}
+
+.improvements p {
+    margin-bottom: 1rem;
+}
+
+.improv-cb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .2rem;
+}
+
+.improvs {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.improvs input {
+    margin-bottom: .5rem;
+}
+
+.stress label {
+    width: 50%;
+    padding-right: 1rem;
+}
+
+.textarea {
+    margin-bottom: 2rem;
+}
+
+.textarea textarea {
+    display: block;
+    outline: none;
+    border: solid 2px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    padding: .4rem;
+    resize: none;
+    width: 100%;
+
+    transition: .2s ease;
+}
+
+.textarea textarea:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.submit {
+    text-align: center;
+}
+
+#submit {
+    padding: .5rem 3rem;
+    background-color: rgb(0, 100, 255);
+    border: none;
+    border-radius: .3rem;
+    color: rgb(200, 200, 250);
+    transition: .2s ease;
+}
+
+#submit:hover {
+    background-color: rgb(20, 80, 250);
+}
+
+@media only screen and (max-width: 800px) {
+    .name, .email, .age, .stress, .rating {
+        display: block;
+    }
+
+    .input input:not([type="radio"]) {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .rating select,
+    .stress select {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .improv-cb {
+        display: block;
+    }
+
+    .improvs {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .gender p {
+        width: 40%;
+    }
+
+    .gender-select {
+        width: 60%;
+    }
+    .container {
+        width: 100%;
+        max-width: none;
+        min-width: none;
+    }
+
+    .title h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    form {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    form:hover {
+        border: none;
+        box-shadow: none;
+    }
+}
