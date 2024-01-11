@@ -25,7 +25,7 @@ body {
 
 .container .title {
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 2rem .5rem;
 }
 
 .title h1 {
@@ -34,7 +34,7 @@ body {
 
 form {
     background-color: rgb(0, 0, 10);
-    padding: 2rem;
+    padding: 1.5rem;
     border: solid 2px rgba(255, 255, 255, 0);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(100, 100, 150, .1);
@@ -48,7 +48,7 @@ form:hover {
 }
 
 .input {
-    margin: 0 0 2rem 0;
+    margin: 0 0 3rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,7 +113,7 @@ select option {
 }
 
 .improvements {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .improvements p {
@@ -143,11 +143,15 @@ select option {
 }
 
 .textarea {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.textarea label {
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .textarea textarea {
-    display: block;
     outline: none;
     border: solid 2px rgba(255, 255, 255, .3);
     border-radius: 5px;
@@ -197,6 +201,16 @@ select option {
         display: block;
         width: 100%;
     }
+
+    .input label {
+        display: inline-block;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .gender-select label {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 670px) {
@@ -224,12 +238,12 @@ select option {
     }
 
     .title h1 {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         margin-bottom: 1rem;
     }
 
     .title p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     form {
